@@ -1,0 +1,182 @@
+*{
+    background: #081b29;
+    color: aqua;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Update container for better responsiveness */
+.container {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Update row and column layout */
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+/* Remove existing column styles */
+.col {
+    display: block;
+}
+
+/* Update image container styles */
+.galleryImg {
+    break-inside: avoid;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* Responsive images */
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the gallery items */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center the gallery */
+    position: relative; /* Allow positioning of child elements */
+}
+
+.galleryImg {
+    margin: 5px;
+    cursor: pointer;
+}
+
+.galleryImg img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Light background for glass effect */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-img {
+    width: 90%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 500px; /* Maximum width */
+}
+
+.lightbox-caption {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #081b29;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 2pc;
+    background: aqua;
+    transition: color 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+}
+
+.close:hover {
+    color: aqua; /* Change color on hover */
+    background: #081b29;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Glow effect on hover */
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+    cursor: pointer;
+    object-fit: cover;
+    opacity: 0.85;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+    padding: 20px;
+    overflow-x: hidden;
+}
+.row{
+    display: flex;
+    gap: 15px;
+    flex-basis: 32.7%;
+ }
+ img:hover{
+    opacity: 1;
+ }
+h1 {
+    font-size: 5vw; /* Responsive font size */
+    padding: 5vw 10vw; /* Responsive padding */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4rem; /* Adjust for smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+}
+
+.gallery{
+    display: flex;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+button{
+    display: block;
+    margin: 50px 30px;
+    padding: 10px;
+    font-size: 20px;
+    background: aqua;
+    color: #081b29;
+    border: none;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s; /* Transition for hover effect */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Glow effect */
+}
+button:hover{
+    color: aqua;
+    background: #081b29;
+    border: 2px solid ;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Enhanced glow on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+}
